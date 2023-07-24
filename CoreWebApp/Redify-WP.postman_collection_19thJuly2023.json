@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "07c4dcf2-0f6c-4b7c-a5b0-48111d969ceb",
+		"name": "Redify-WP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26755025"
+	},
+	"item": [
+		{
+			"name": "API Library",
+			"item": [
+				{
+					"name": "Single License record",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{site_url}}wp-json/dlm/v1/licenses?consumer_key={{consumer_key}}&consumer_secret={{consumer_secret}}",
+							"host": [
+								"{{site_url}}wp-json"
+							],
+							"path": [
+								"dlm",
+								"v1",
+								"licenses"
+							],
+							"query": [
+								{
+									"key": "consumer_key",
+									"value": "{{consumer_key}}"
+								},
+								{
+									"key": "consumer_secret",
+									"value": "{{consumer_secret}}"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Custom-API",
+			"item": [
+				{
+					"name": "Fetch user licenses",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{site_url}}wp-json/dlm/v1/licenses?user_email=vsoni@mededmanagement.com&consumer_key={{consumer_key}}&consumer_secret={{consumer_secret}}",
+							"host": [
+								"{{site_url}}wp-json"
+							],
+							"path": [
+								"dlm",
+								"v1",
+								"licenses"
+							],
+							"query": [
+								{
+									"key": "user_email",
+									"value": "vsoni@mededmanagement.com"
+								},
+								{
+									"key": "consumer_key",
+									"value": "{{consumer_key}}"
+								},
+								{
+									"key": "consumer_secret",
+									"value": "{{consumer_secret}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Licenses detail with user list",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{site_url}}wp-json/dlm/v1/licenses/B4B1-BAA3-AADC-423A/?consumer_key={{consumer_key}}&consumer_secret={{consumer_secret}}",
+							"host": [
+								"{{site_url}}wp-json"
+							],
+							"path": [
+								"dlm",
+								"v1",
+								"licenses",
+								"B4B1-BAA3-AADC-423A",
+								""
+							],
+							"query": [
+								{
+									"key": "consumer_key",
+									"value": "{{consumer_key}}"
+								},
+								{
+									"key": "consumer_secret",
+									"value": "{{consumer_secret}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate License",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{site_url}}wp-json/dlm/v1/licenses/activate/41AD-32C3-313D-13C1?consumer_key={{consumer_key}}&consumer_secret={{consumer_secret}}&email=kpandya+3@MedEdManagement.com&meta[0][tenant_id ]=192.168.10.23&meta[0][site_id]=1234",
+							"host": [
+								"{{site_url}}wp-json"
+							],
+							"path": [
+								"dlm",
+								"v1",
+								"licenses",
+								"activate",
+								"41AD-32C3-313D-13C1"
+							],
+							"query": [
+								{
+									"key": "consumer_key",
+									"value": "{{consumer_key}}"
+								},
+								{
+									"key": "consumer_secret",
+									"value": "{{consumer_secret}}"
+								},
+								{
+									"key": "email",
+									"value": "kpandya+3@MedEdManagement.com"
+								},
+								{
+									"key": "meta[0][tenant_id ]",
+									"value": "192.168.10.23"
+								},
+								{
+									"key": "meta[0][site_id]",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{site_url}}wp-json/dlm/v1/licenses/validate/b90ab3f8f541f0b4110a5806fc83457f5dc927b8?consumer_key={{consumer_key}}&consumer_secret={{consumer_secret}}&email=kpandya@MedEdManagement.com",
+							"host": [
+								"{{site_url}}wp-json"
+							],
+							"path": [
+								"dlm",
+								"v1",
+								"licenses",
+								"validate",
+								"b90ab3f8f541f0b4110a5806fc83457f5dc927b8"
+							],
+							"query": [
+								{
+									"key": "consumer_key",
+									"value": "{{consumer_key}}"
+								},
+								{
+									"key": "consumer_secret",
+									"value": "{{consumer_secret}}"
+								},
+								{
+									"key": "email",
+									"value": "kpandya@MedEdManagement.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{site_url}}wp-json/dlm/v1/licenses/deactivate/b90ab3f8f541f0b4110a5806fc83457f5dc927b8?consumer_key={{consumer_key}}&consumer_secret={{consumer_secret}}&email=kpandya@MedEdManagement.com",
+							"host": [
+								"{{site_url}}wp-json"
+							],
+							"path": [
+								"dlm",
+								"v1",
+								"licenses",
+								"deactivate",
+								"b90ab3f8f541f0b4110a5806fc83457f5dc927b8"
+							],
+							"query": [
+								{
+									"key": "consumer_key",
+									"value": "{{consumer_key}}"
+								},
+								{
+									"key": "consumer_secret",
+									"value": "{{consumer_secret}}"
+								},
+								{
+									"key": "email",
+									"value": "kpandya@MedEdManagement.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "site_url",
+			"value": "https://staging.readify365.com/"
+		},
+		{
+			"key": "consumer_key",
+			"value": "ck_7475b33005c373e372bc6615f87a952004e5e244",
+			"type": "string"
+		},
+		{
+			"key": "consumer_secret",
+			"value": "cs_8963127dfa97de435c1c49dedfb7afe2f430365a",
+			"type": "string"
+		}
+	]
+}
